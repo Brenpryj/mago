@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Batalla de Magos - Creado por PB</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>🧙 Batalla de Magos</h1>
+
+  <div class="escenario">
+    <div class="enemigo" id="enemigo1">👹</div>
+    <div class="enemigo" id="enemigo2">👺</div>
+    <div class="mago verde" id="magoVerde">
+      <div class="cara">
+        <div class="ojos"></div>
+        <div class="barba"></div>
+      </div>
+      <div class="cuerpo"></div>
+      <div class="varita" id="varitaVerde"></div>
+    </div>
+
+    <div class="mago azul" id="magoAzul">
+      <div class="cara">
+        <div class="ojos"></div>
+        <div class="barba"></div>
+      </div>
+      <div class="cuerpo"></div>
+      <div class="varita" id="varitaAzul"></div>
+    </div>
+  </div>
+
+  <div class="acciones">
+    <h3>Puntaje: <span id="puntaje">0</span> | Nivel: <span id="nivel">1</span></h3>
+    <input type="text" id="hechizo" placeholder="Hechizo secreto: habemus o fuego">
+    <button onclick="lanzarHechizo('verde', event)">Mago Verde lanza</button>
+    <button onclick="lanzarHechizo('azul', event)">Mago Azul lanza</button>
+  </div>
+
+  <div id="mensaje"></div>
+
+  <audio id="sonidoHechizo" src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_ba27f70ee0.mp3?filename=magic-spell-123125.mp3"></audio>
+
+  <footer>Creado por PB</footer>
+  <script src="script.js"></script>
+</body>
+</html>
+
+<div id="pantallaVictoria" class="victoria" style="display:none;">
+  <h2>🏆 ¡Victoria! Has derrotado a todos los enemigos</h2>
+  <p>Puntaje final: <span id="puntajeFinal"></span></p>
+  <button onclick="reiniciarJuego()">Jugar de nuevo</button>
+</div>
